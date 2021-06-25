@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details and Summery with FontAwesome</title>
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web\css\all.css">
+    <style>
+        body{
+            background-color: #212124;
+            padding: 10px 20px;
+        }
+
+        header{
+            background-color:#426bbb;
+            margin: 0 auto;
+            color:aliceblue;
+            border-radius: 10px;
+            text-align: center;
+            padding: 15px;
+        }      
+
+        h1{
+            font-size: 3vw;
+        }
+
+        nav{
+            background-color:whitesmoke;
+            margin: 0 auto;
+            border: 3px solid #426bbb;
+            border-radius: 10px;
+            padding: 0.5vw;
+            text-align: center; 
+        }
+
+        nav div{
+            border-radius: 0.5vw;
+            background-color: #426bbb;
+            color: white;
+            padding: 0.4vw 0.6vw;
+            width: 8vw;
+            margin: 0 3vw;
+            display: inline-block;
+            text-align: center;    
+            transition: width 0.5s, height 0.5s, transform 0.5s;
+        }
+
+        nav div:hover{
+            transform:scale(1.1,1.1);  
+        }               
+        
+        #navtext{
+            font-size: 1.2vw;
+        }
+
+        .fas{
+            font-size: 1.2vw;
+        }
+
+        article{
+            color: #bdbdbd;
+            font-size: 1.1vw;
+            line-height: 1.5vw;
+            margin: 0.7vw auto;
+            text-align: justify;
+            padding: 0.7vw;
+
+        }
+
+        fieldset{
+            margin: 3vw auto;
+            background-color:#212124;
+        }
+
+        legend{
+            padding: 0.5vw;
+            font-size: 1.5vw;
+            background-color:#426bbb;
+            color: whitesmoke;
+            text-align: left;
+        }
+
+        details[open] summary ~ * {
+            animation: sweep .7s ease-in-out;
+        }
+
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0px)}
+        }
+
+
+        details > summary{
+            margin: 1.2vw 0;
+            padding: 0.5vw;
+            width: auto;
+            font-size: 1.2vw;
+            background-color: #426bbb;
+            color: whitesmoke;
+            border: none;
+            border-radius: 0.5vw;
+            cursor: pointer;
+            position: sticky; /*acordian purpose*/
+            top: 0; /*acordian purpose*/
+        }
+
+
+        details > dl{
+            background-color:#212124;
+            color: #bdbdbd;
+            border: 0.125rem solid #426bbb;
+            border-radius: 5px;
+            padding: 0.7vw;
+            margin: 0 auto;       
+            font-size: 1vw;     
+        }
+
+        details > dl > dd{
+            padding: 0.625rem;
+            margin: 0 0.625rem;
+            text-align: justify;
+            line-height: 1.2vw;
+        }                
+
+        footer {
+            font-size: 1.2vw;
+            margin: 0 auto;
+            margin-top: 1.25rem;
+            column-count: 3;
+            background-color: #426bbb;
+            color: whitesmoke;
+            padding: 1.25rem;
+            text-align: center;    
+        }
+
+        p{
+            font-size: 1vw;
+            margin: 0 auto;
+            padding: 0.625rem;
+            background-color: #426bbb;
+            text-align: center;
+            color:whitesmoke;
+        }
+
+        @media screen and (max-width: 550px) {
+            #navtext{
+                display: none;
+            }
+            nav div{
+                margin: 0.5vw;
+            }
+            nav div:hover{
+                background-color: rgb(109, 158, 250);
+                color: white;
+            }
+            nav .fas{
+                font-size: 2vw;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Animal Kingdom</h1>
+        <nav>        
+            <div><span class="fas fa-home"></span><span id="navtext"> HOME</span></div>
+            <div><span class="fas fa-address-card"></span><span id="navtext"> ABOUT</span></div> 
+            <div><span class = "fas fa-user"></span><span id="navtext"> LOGIN</span></div>
+            <div><span class = "fas fa-envelope"></span><span id="navtext"> CONTACT</span></div> 
+            <div><span class = "fas fa-hand-holding-usd"></span><span id="navtext"> DONATE</span></div>
+        </nav>
+    </header>
+    
+
+    <section>
+        <main>
+            <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est earum ipsa voluptas. Magnam non architecto unde aliquid provident nisi voluptatum eaque, sed, dolorum voluptas consequatur tenetur itaque iste inventore? Debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quisquam vel magni iste quibusdam quo ipsum nihil saepe unde sequi!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime voluptate sequi excepturi. In aspernatur laborum repellat doloremque suscipit iusto, neque natus reprehenderit unde error voluptate illo officia beatae, odio possimus corrupti nihil dignissimos magnam. Nostrum illum, pariatur, quaerat id est accusantium, eligendi assumenda unde aspernatur totam dicta fugiat cumque rem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tenetur nisi placeat quo facilis quaerat officia, dolorum odio ut, hic id sit eum ullam! Quibusdam consequuntur recusandae nam reiciendis sapiente quos voluptas culpa cumque, error distinctio, quia nisi iste? Sit nesciunt hic, deleniti atque doloribus excepturi! Cumque tenetur est nam ipsam fuga ad eius ab quos veniam possimus, beatae at a aut rerum quas non molestiae. Numquam expedita quas accusamus. Eligendi modi nostrum, delectus hic eaque a laudantium harum perferendis officiis nesciunt. Quis nam id, distinctio ipsum accusantium, minus perferendis eum illum cupiditate error beatae ab, inventore totam esse porro! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis asperiores ipsa at dolor, voluptatem ab nihil ratione eaque non nostrum alias possimus, a cum praesentium doloribus delectus earum recusandae esse incidunt beatae maxime! Deserunt facilis mollitia at, commodi quia perspiciatis, quibusdam quae expedita ex beatae dolorem, velit labore eos dignissimos.</article>
+            <fieldset>
+                <legend><span class="fas fa-chevron-circle-right"> TYPE: 1</span></legend>
+                <details open>
+                    <summary>INVERTEBRATES <span class="fas fa-paw fa-spin"></span></summary>
+                    <dl>
+                        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit qui quisquam illo hic consectetur doloribus cupiditate accusantium labore, soluta provident eius obcaecati animi officia voluptate ex eligendi corrupti omnis pariatur. Ea mollitia qui cumque eaque distinctio sapiente, placeat nostrum asperiores quisquam voluptas quam architecto eveniet? Maxime suscipit esse mollitia facilis itaque, facere dolor quae laborum obcaecati beatae modi dolore, aut quibusdam optio similique sunt perspiciatis enim odit aliquid exercitationem accusamus, ea quia quaerat. Odio vero, laborum animi debitis assumenda cum voluptate soluta voluptatem labore perspiciatis inventore ipsa, quam vitae adipisci corrupti, eligendi consequatur. Ratione ut sequi, dolorem quisquam nisi cum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, amet sunt placeat blanditiis omnis cum debitis harum asperiores officia atque velit delectus, aliquid assumenda corrupti adipisci sint, esse veniam nesciunt natus dolores qui impedit nemo. Blanditiis iusto provident magni, ipsa odit nobis dolorem. Harum dicta necessitatibus velit ut saepe aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel impedit quam iusto, alias recusandae iure nobis minus? Perspiciatis dolore veritatis corporis quas minima alias quos vero odio. Iusto aut nemo voluptate quidem praesentium dolorum cum expedita asperiores, doloribus rerum perferendis aspernatur dignissimos, sint quasi cupiditate voluptatem numquam aliquam. Similique obcaecati sit a inventore optio nemo, corrupti dolore incidunt, quas, impedit eligendi pariatur cum ex. Incidunt asperiores quo eius pariatur minima nihil dolor adipisci laboriosam ea porro fugit, corrupti hic ducimus molestiae praesentium suscipit sunt molestias atque. Omnis beatae esse explicabo iure neque dolore. Aliquid nihil ut blanditiis perspiciatis eligendi omnis numquam minus expedita, voluptatem totam quos veniam. Laudantium tenetur dignissimos illum maiores expedita voluptatum exercitationem, quae sunt itaque, modi magni sequi ullam id dolorem temporibus doloribus unde quas non voluptatibus rerum totam. Architecto, nobis? Eaque vero tempora error ipsum, quaerat dolores fugit ducimus a accusamus asperiores aut reprehenderit aperiam, rerum sequi debitis. Natus dolorem perspiciatis debitis tempora mollitia rem distinctio aspernatur eligendi reiciendis laboriosam doloremque, eum ipsa voluptates numquam alias iste sint totam deserunt, voluptas magni blanditiis impedit, inventore officiis quidem? Ex laboriosam ullam earum quaerat ut, odio suscipit sit dolorum perferendis a veniam expedita, officia excepturi numquam nemo maxime.</dd>
+                    </dl>
+                </details>
+            </fieldset>
+
+            <fieldset>
+                <legend><span class="fas fa-chevron-circle-right"> TYPE: 2</span></legend>
+                <details>
+                    <summary>VERTEBRATES <span class="fas fa-paw fa-spin"></span></summary>
+                    <dl>
+                        <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, pariatur minima dicta, veritatis consequatur quaerat, quas illum voluptatum perspiciatis magni doloribus fuga necessitatibus! Amet ut tempore dignissimos modi doloremque odio sint atque commodi obcaecati possimus, numquam corrupti nihil iure voluptas ipsa exercitationem rem, neque velit officiis vitae dolorem eum, minima placeat. Vero eaque adipisci, fugiat possimus debitis in provident tempora praesentium saepe. Quisquam autem repellat exercitationem fugiat cupiditate dignissimos, beatae atque consequatur unde quod error? Delectus dolorem ex praesentium at quia distinctio totam enim eaque harum. Libero repellendus, vero consequatur, saepe dignissimos minima laborum iusto quos nesciunt quam nam ducimus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ducimus eos veniam ad nihil optio, nesciunt sequi voluptate, libero consectetur incidunt temporibus corrupti ipsa vitae qui, placeat neque ipsum laboriosam corporis accusamus enim mollitia commodi quia ut. Impedit voluptatum numquam modi facilis sunt, iure officiis facere corporis a eius suscipit nesciunt dolorum! Consequatur ab aliquid veritatis. Ipsam, dolorem accusantium illum veritatis voluptates totam vero. Ipsa recusandae vitae, ipsam enim sequi illo. Tempore cumque magni eos ratione incidunt cum laboriosam veniam beatae, commodi, enim laborum aliquam vel, dolore magnam asperiores autem eius? Officiis, ea, fugit voluptatem, enim eligendi omnis impedit explicabo eum iure ducimus temporibus aliquid eius reprehenderit minus! Autem corporis deserunt eius molestias maiores! Facere id quibusdam in maiores quia, odit eaque voluptatum nisi ut recusandae neque error sequi minima perspiciatis quaerat necessitatibus debitis magnam quisquam natus vero adipisci fugit ullam! Aut iure quas in corrupti, provident praesentium aliquid placeat at maxime aliquam nisi laborum voluptatum, rem voluptatem quasi, a deserunt suscipit non aperiam qui totam culpa unde ratione minima? Voluptate asperiores maiores enim deleniti sit quae saepe a consequuntur quaerat, pariatur ut. Commodi a, laudantium sed distinctio unde impedit in ex dignissimos facilis. Rerum quod iure porro assumenda impedit doloribus fuga quas fugit veniam, voluptatum earum eaque modi sequi dolorum voluptates voluptatibus nostrum suscipit magni laudantium eveniet eligendi odio alias labore! Sunt nemo autem dolores delectus ea consequuntur nostrum neque officia voluptas molestiae, est corrupti ullam quidem eligendi minima eaque adipisci voluptate, porro culpa magni tempora nobis deleniti. Quam.</dd>
+                    </dl>
+                </details>
+            </fieldset>
+
+            <fieldset>
+                <legend><span class="fas fa-chevron-circle-right"> TYPE: 3</span></legend>
+                <details>
+                    <summary>FISH <span class="fas fa-paw fa-spin"></span></summary>
+                    <dl>
+                        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, autem. Veniam saepe reiciendis quae est architecto deleniti a, minus repudiandae, placeat laudantium suscipit! Deserunt eveniet, id minima autem cupiditate vel expedita quas assumenda dolore ad eius animi voluptas ducimus laborum unde blanditiis quidem molestias est natus? Blanditiis, et voluptates sed sint delectus at voluptatibus commodi molestiae eius mollitia non aliquam maxime officia, magni necessitatibus sunt dicta quis labore, esse voluptas exercitationem incidunt ea rem! Culpa totam consectetur deserunt voluptatem beatae illum nostrum sint veniam! Debitis illo laborum earum, in quae reprehenderit, ut quasi nostrum vitae voluptas iure nobis, quis nemo?Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ducimus eos veniam ad nihil optio, nesciunt sequi voluptate, libero consectetur incidunt temporibus corrupti ipsa vitae qui, placeat neque ipsum laboriosam corporis accusamus enim mollitia commodi quia ut. Impedit voluptatum numquam modi facilis sunt, iure officiis facere corporis a eius suscipit nesciunt dolorum! Consequatur ab aliquid veritatis. Ipsam, dolorem accusantium illum veritatis voluptates totam vero. Ipsa recusandae vitae, ipsam enim sequi illo. Tempore cumque magni eos ratione incidunt cum laboriosam veniam beatae, commodi, enim laborum aliquam vel, dolore magnam asperiores autem eius? Officiis, ea, fugit voluptatem, enim eligendi omnis impedit explicabo eum iure ducimus temporibus aliquid eius reprehenderit minus! Autem corporis deserunt eius molestias maiores! Facere id quibusdam in maiores quia, odit eaque voluptatum nisi ut recusandae neque error sequi minima perspiciatis quaerat necessitatibus debitis magnam quisquam natus vero adipisci fugit ullam! Aut iure quas in corrupti, provident praesentium aliquid placeat at maxime aliquam nisi laborum voluptatum, rem voluptatem quasi, a deserunt suscipit non aperiam qui totam culpa unde ratione minima? Voluptate asperiores maiores enim deleniti sit quae saepe a consequuntur quaerat, pariatur ut. Commodi a, laudantium sed distinctio unde impedit in ex dignissimos facilis. Rerum quod iure porro assumenda impedit doloribus fuga quas fugit veniam, voluptatum earum eaque modi sequi dolorum voluptates voluptatibus nostrum suscipit magni laudantium eveniet eligendi odio alias labore! Sunt nemo autem dolores delectus ea consequuntur nostrum neque officia voluptas molestiae, est corrupti ullam quidem eligendi minima eaque adipisci voluptate, porro culpa magni tempora nobis deleniti. Quam.</dd>
+                    </dl>
+                </details>
+            </fieldset>
+
+            <fieldset>
+                <legend><span class="fas fa-chevron-circle-right"> TYPE: 4</span></legend>
+                <details>
+                    <summary>AMPHIBIANS <span class="fas fa-paw fa-spin"></span></summary>
+                    <dl>
+                        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nostrum aliquam voluptatem voluptate facilis quam quisquam. Blanditiis rem aperiam quisquam officia commodi aliquid, porro cupiditate fugiat officiis laudantium similique. Voluptatum debitis inventore dignissimos, minus earum eveniet id fugiat fuga quis sapiente libero tenetur voluptates repudiandae laboriosam accusantium. Fugit optio molestiae, animi, nihil aliquam provident ipsum eveniet explicabo earum labore repellat dolorem cumque magni? At nemo id sapiente excepturi exercitationem explicabo odio architecto, fugiat deleniti voluptas maxime numquam eius tempore incidunt sed ad, hic modi voluptatibus asperiores pariatur velit porro ab! Laboriosam sunt perferendis quo eveniet voluptates exercitationem quasi error ipsam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ducimus eos veniam ad nihil optio, nesciunt sequi voluptate, libero consectetur incidunt temporibus corrupti ipsa vitae qui, placeat neque ipsum laboriosam corporis accusamus enim mollitia commodi quia ut. Impedit voluptatum numquam modi facilis sunt, iure officiis facere corporis a eius suscipit nesciunt dolorum! Consequatur ab aliquid veritatis. Ipsam, dolorem accusantium illum veritatis voluptates totam vero. Ipsa recusandae vitae, ipsam enim sequi illo. Tempore cumque magni eos ratione incidunt cum laboriosam veniam beatae, commodi, enim laborum aliquam vel, dolore magnam asperiores autem eius? Officiis, ea, fugit voluptatem, enim eligendi omnis impedit explicabo eum iure ducimus temporibus aliquid eius reprehenderit minus! Autem corporis deserunt eius molestias maiores! Facere id quibusdam in maiores quia, odit eaque voluptatum nisi ut recusandae neque error sequi minima perspiciatis quaerat necessitatibus debitis magnam quisquam natus vero adipisci fugit ullam! Aut iure quas in corrupti, provident praesentium aliquid placeat at maxime aliquam nisi laborum voluptatum, rem voluptatem quasi, a deserunt suscipit non aperiam qui totam culpa unde ratione minima? Voluptate asperiores maiores enim deleniti sit quae saepe a consequuntur quaerat, pariatur ut. Commodi a, laudantium sed distinctio unde impedit in ex dignissimos facilis. Rerum quod iure porro assumenda impedit doloribus fuga quas fugit veniam, voluptatum earum eaque modi sequi dolorum voluptates voluptatibus nostrum suscipit magni laudantium eveniet eligendi odio alias labore! Sunt nemo autem dolores delectus ea consequuntur nostrum neque officia voluptas molestiae, est corrupti ullam quidem eligendi minima eaque adipisci voluptate, porro culpa magni tempora nobis deleniti. Quam.</dd>
+                    </dl>
+                </details>
+            </fieldset>
+
+            <fieldset>
+                <legend><span class="fas fa-chevron-circle-right"> TYPE: 5</span></legend>
+                <details>
+                    <summary>REPTILES AND BIRDS <span class="fas fa-paw fa-spin"></span></summary>
+                    <dl>
+                        <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, accusamus recusandae. Debitis deleniti blanditiis quibusdam totam, laudantium neque harum, dolores quaerat numquam asperiores molestias, nobis provident reiciendis hic quidem ipsa. Autem aperiam exercitationem sint tempora accusantium fugit nemo, quisquam mollitia deleniti minus explicabo, animi ullam minima at velit magni, eum deserunt dignissimos consequatur quia nam cumque ut reprehenderit. Laudantium excepturi in cum inventore quis nulla quod deserunt officiis accusamus assumenda reiciendis doloribus iusto iste quibusdam sequi quos, cumque quae porro placeat commodi ex odit unde architecto quo. Corrupti, suscipit magnam voluptates nesciunt quam necessitatibus minus incidunt, nam sequi, dolorum odit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ducimus eos veniam ad nihil optio, nesciunt sequi voluptate, libero consectetur incidunt temporibus corrupti ipsa vitae qui, placeat neque ipsum laboriosam corporis accusamus enim mollitia commodi quia ut. Impedit voluptatum numquam modi facilis sunt, iure officiis facere corporis a eius suscipit nesciunt dolorum! Consequatur ab aliquid veritatis. Ipsam, dolorem accusantium illum veritatis voluptates totam vero. Ipsa recusandae vitae, ipsam enim sequi illo. Tempore cumque magni eos ratione incidunt cum laboriosam veniam beatae, commodi, enim laborum aliquam vel, dolore magnam asperiores autem eius? Officiis, ea, fugit voluptatem, enim eligendi omnis impedit explicabo eum iure ducimus temporibus aliquid eius reprehenderit minus! Autem corporis deserunt eius molestias maiores! Facere id quibusdam in maiores quia, odit eaque voluptatum nisi ut recusandae neque error sequi minima perspiciatis quaerat necessitatibus debitis magnam quisquam natus vero adipisci fugit ullam! Aut iure quas in corrupti, provident praesentium aliquid placeat at maxime aliquam nisi laborum voluptatum, rem voluptatem quasi, a deserunt suscipit non aperiam qui totam culpa unde ratione minima? Voluptate asperiores maiores enim deleniti sit quae saepe a consequuntur quaerat, pariatur ut. Commodi a, laudantium sed distinctio unde impedit in ex dignissimos facilis. Rerum quod iure porro assumenda impedit doloribus fuga quas fugit veniam, voluptatum earum eaque modi sequi dolorum voluptates voluptatibus nostrum suscipit magni laudantium eveniet eligendi odio alias labore! Sunt nemo autem dolores delectus ea consequuntur nostrum neque officia voluptas molestiae, est corrupti ullam quidem eligendi minima eaque adipisci voluptate, porro culpa magni tempora nobis deleniti. Quam.</dd>
+                    </dl>
+                </details>
+            </fieldset>
+
+            <fieldset>
+                <legend><span class="fas fa-chevron-circle-right"> TYPE: 6</span></legend>
+                <details>
+                    <summary>MAMMALS <span class="fas fa-paw fa-spin"></span></summary>
+                    <dl>
+                        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatum enim repellendus, facilis hic deserunt suscipit corporis quaerat aut perferendis quos explicabo blanditiis similique eos quam molestiae aspernatur consectetur! Aperiam voluptate nihil iusto? Atque vitae accusamus nihil quis veniam! Sunt officia, repudiandae quae aliquam optio adipisci asperiores temporibus iusto deserunt magnam sed soluta modi mollitia sit neque et atque similique! Esse ad, enim accusamus perspiciatis ducimus, dolorum repudiandae autem libero unde blanditiis, nobis sequi dicta ullam quaerat? Ullam doloribus sunt consequuntur consectetur nulla rerum amet minus? Ut asperiores, aperiam accusantium quo totam eveniet beatae, sit recusandae amet molestias voluptatum autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ducimus eos veniam ad nihil optio, nesciunt sequi voluptate, libero consectetur incidunt temporibus corrupti ipsa vitae qui, placeat neque ipsum laboriosam corporis accusamus enim mollitia commodi quia ut. Impedit voluptatum numquam modi facilis sunt, iure officiis facere corporis a eius suscipit nesciunt dolorum! Consequatur ab aliquid veritatis. Ipsam, dolorem accusantium illum veritatis voluptates totam vero. Ipsa recusandae vitae, ipsam enim sequi illo. Tempore cumque magni eos ratione incidunt cum laboriosam veniam beatae, commodi, enim laborum aliquam vel, dolore magnam asperiores autem eius? Officiis, ea, fugit voluptatem, enim eligendi omnis impedit explicabo eum iure ducimus temporibus aliquid eius reprehenderit minus! Autem corporis deserunt eius molestias maiores! Facere id quibusdam in maiores quia, odit eaque voluptatum nisi ut recusandae neque error sequi minima perspiciatis quaerat necessitatibus debitis magnam quisquam natus vero adipisci fugit ullam! Aut iure quas in corrupti, provident praesentium aliquid placeat at maxime aliquam nisi laborum voluptatum, rem voluptatem quasi, a deserunt suscipit non aperiam qui totam culpa unde ratione minima? Voluptate asperiores maiores enim deleniti sit quae saepe a consequuntur quaerat, pariatur ut. Commodi a, laudantium sed distinctio unde impedit in ex dignissimos facilis. Rerum quod iure porro assumenda impedit doloribus fuga quas fugit veniam, voluptatum earum eaque modi sequi dolorum voluptates voluptatibus nostrum suscipit magni laudantium eveniet eligendi odio alias labore! Sunt nemo autem dolores delectus ea consequuntur nostrum neque officia voluptas molestiae, est corrupti ullam quidem eligendi minima eaque adipisci voluptate, porro culpa magni tempora nobis deleniti. Quam.</dd>
+                    </dl>
+                </details>
+            </fieldset>
+
+        </main>
+    </section>
+    
+    <footer>
+        <div>
+            Get to Know Us <br>
+            About Us <br>
+            Careers
+        </div>
+        <div>
+            Connect with Us <br>
+            Facebook <br>
+            Twitter
+        </div>
+        <div>
+            Make Money with Us <br>
+            Sell on Amazon <br>
+            Advertise
+        </div>
+    </footer>
+    <p>@simence13 | &copy; Copyright 2021</p>
+</body>
+</html>
