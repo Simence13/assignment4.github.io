@@ -9,12 +9,14 @@
     <style>
         body{
             background-color: #212124;
-             /*padding: 10px 20px; */
+            min-height: 100vh;   
+            display: grid;
+            grid-template-rows: auto 1fr auto;
         }
 
         header{
             background-color:#426bbb;
-            margin: 0 auto;
+            margin: 0;
             color:aliceblue;
             border-radius: 10px;
             text-align: center;
@@ -125,7 +127,7 @@
 
         footer {
             font-size: 1.2vw;
-            margin: 0 auto;
+            margin: 0;
             margin-top: 1.25rem;
             column-count: 3;
             background-color: #426bbb;
@@ -136,7 +138,7 @@
 
         p{
             font-size: 1vw;
-            margin: 0 auto;
+            margin: 0;
             padding: 0.625rem;
             background-color: #426bbb;
             text-align: center;
@@ -148,14 +150,15 @@
                 display: none;
             }
             nav div{
-                margin: 0.5vw;
+                margin: 0.7vw;
+                padding: 1vh;
             }
             nav div:hover{
                 background-color: rgb(109, 158, 250);
                 color: white;
             }
             nav .fas{
-                font-size: 2vw;
+                font-size: 5vw;
             }
 
         }
